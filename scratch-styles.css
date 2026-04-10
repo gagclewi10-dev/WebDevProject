@@ -1,0 +1,20 @@
+body { 
+    background-color: #e8f4f8; 
+    font-family: Georgia, serif; 
+    color: #2c3e50; 
+}
+h1 { 
+    color: #040210; 
+    font-family: Arial, sans-serif; 
+}
+.box { 
+    border: 2px solid #2c3e50; 
+    padding: 15px; 
+    margin: 10px; 
+    background-color: #fff; 
+}
+.highlight { 
+    color: #000000c4; 
+    font-family: 
+    'Courier New', monospace; 
+}

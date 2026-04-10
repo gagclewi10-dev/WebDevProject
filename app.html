@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html><head><title>Guess the Number</title>
+<style>
+body{font-family:Arial;background:#222;color:#fff;text-align:center;padding:50px;}
+input,button{padding:10px;font-size:16px;margin:5px;}
+button{background:#27ae60;color:#fff;border:none;cursor:pointer;}
+#msg{font-size:20px;margin:20px;}
+</style></head>
+<body>
+<h1>🎯 Guess the Number (1-100)</h1>
+<input type="number" id="guess" min="1" max="100">
+<button onclick="check()">Guess</button>
+<button onclick="reset()">Reset</button>
+<p id="msg">Make a guess!</p>
+<p id="count">Attempts: 0</p>
+<a href="scratch.html" style="color:#27ae60;">← Back to Scratch Page</a>
+<script>
+let num=Math.floor(Math.random()*100)+1, tries=0;
+function check(){
+  let g=+document.getElementById('guess').value; tries++;
+  document.getElementById('count').innerText='Attempts: '+tries;
+  let m=document.getElementById('msg');
+  if(g===num){m.innerText='🎉 Correct! The number was '+num;}
+  else if(g<num){m.innerText='Too low! Try higher.';}
+  else{m.innerText='Too high! Try lower.';}
+}
+function reset(){num=Math.floor(Math.random()*100)+1;tries=0;
+  document.getElementById('msg').innerText='New game! Guess again.';
+  document.getElementById('count').innerText='Attempts: 0';}
+</script></body></html>
